@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams, withRouter } from 'react-router'
 
-const DetallePosts = () => {
+const DetailPost = () => {
 
     const { id } = useParams()
     
@@ -67,4 +67,4 @@ const DetallePosts = () => {
     )
 }
 
-export default withRouter(DetallePosts)
+export default withRouter(DetailPost)

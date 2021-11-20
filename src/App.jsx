@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';  
 import CreateForm from './components/CreateForm';
-import DetallePosts from './components/DetallePosts';
 import EditForm from './components/EditForm';
 import Home from './components/Home';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
-//import PrivateRouteEditForm from './components/PrivateRouteEditForm';
+import PrivateRouteEditForm from './components/PrivateRouteEditForm';
 import PrivateRouteLogin from './components/PrivateRouteLogin';
 import PrivateRouteCreateForm from './components/PrivateRouteCreateForm';
 
 import InfoProvider from './context/InfoProvider';
 import LoginProvider from './context/LoginProvider';
+import DetailPost from './components/DetailPost';
 
 
 function App() {
@@ -27,18 +27,18 @@ function App() {
 
               <PrivateRouteLogin exact path='/login' component={Login} />
 
-            {/* <PrivateRouteEditForm exact path='/edit-form/:id' component={EditForm} /> */}
+            <PrivateRouteEditForm exact path='/edit-form/:id' component={EditForm} />
             
             <PrivateRouteCreateForm exact path='/create-form' component={CreateForm} />
             
 
-              <Route path='/edit-form/:id' exact>
+            {/* <Route path='/edit-form/:id' exact>
                 <EditForm />
-            </Route>
+            </Route> */}
             
               
             <Route path='/detail/:id' exact>
-                <DetallePosts />
+                <DetailPost />
             </Route>
             
             {/* <Route path='/create-form' exact>
