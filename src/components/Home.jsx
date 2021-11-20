@@ -80,7 +80,7 @@ const Home = (props) => {
                                         className='ms-2'
                                     >
                                         
-                                            <i class="bi bi-arrow-up-square-fill float-end text-dark size-icons"></i>
+                                            <i className="bi bi-arrow-up-square-fill float-end text-dark size-icons"></i>
                                         
                                         </Link>
                                 </li>
